@@ -2,7 +2,7 @@
 name: security-news-collector
 description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지 게시판에서 최신 기사/공지를 수집하는 에이전트. WebFetch로 목록 페이지를 가져와 이전 실행 이후의 신규 항목만 추려 구조화된 파일로 저장한다. 요약이나 해설은 하지 않고 수집에만 집중한다.
 tools: WebFetch, Read, Write, Bash
-model: opus
+model: haiku
 ---
 
 ## 핵심 역할

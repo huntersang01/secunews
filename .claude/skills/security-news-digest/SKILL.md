@@ -1,6 +1,6 @@
 ---
 name: security-news-digest
-description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수집해서 한국어 데일리 다이제스트로 요약하는 전체 워크플로우를 조율한다. "보안뉴스 요약", "KISA 공지 확인", "오늘의 보안 소식", "보안 다이제스트", "보안뉴스/보안공지 다시 수집", "다이제스트 재작성", "보안 소식 업데이트" 등 관련 요청 시 반드시 이 스킬을 사용한다. 매일 08:00 KST 스케줄 실행에서도 이 스킬이 진입점이다.
+description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수집해서 한국어 데일리 다이제스트로 요약하고 이메일로 발송하는 전체 워크플로우를 조율한다. "보안뉴스 요약", "KISA 공지 확인", "오늘의 보안 소식", "보안 다이제스트", "보안뉴스/보안공지 다시 수집", "다이제스트 재작성", "보안 소식 업데이트", "다이제스트 메일 다시 보내줘" 등 관련 요청 시 반드시 이 스킬을 사용한다. 매일 08:00 KST 스케줄 실행에서도 이 스킬이 진입점이다.
 ---
 
 # 보안뉴스 데일리 다이제스트 오케스트레이터
@@ -23,7 +23,7 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 
 ## Phase 1: 수집
 
-`Agent` 도구로 호출한다 (`subagent_type: "general-purpose"`, `model: "opus"` 명시). 이 환경의 Agent 도구는 커스텀 이름을 `subagent_type`으로 직접 받지 않으므로, 프롬프트 안에서 에이전트 정의 파일과 스킬 파일을 먼저 읽고 그 역할을 따르도록 명시해야 한다:
+`Agent` 도구로 호출한다 (`subagent_type: "general-purpose"`, `model: "haiku"` 명시 — 목록 추출·필터링은 고급 추론이 필요 없는 기계적 작업이라 가장 저렴한 모델로 충분하다). 이 환경의 Agent 도구는 커스텀 이름을 `subagent_type`으로 직접 받지 않으므로, 프롬프트 안에서 에이전트 정의 파일과 스킬 파일을 먼저 읽고 그 역할을 따르도록 명시해야 한다:
 
 - 먼저 읽을 파일: `.claude/agents/security-news-collector.md` (역할 정의), `.claude/skills/security-news-collect/SKILL.md` (수집 절차)
 - 프롬프트에 실행 날짜(오늘, KST 기준)를 명시한다.
@@ -32,17 +32,30 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 
 ## Phase 2: 요약
 
-`Agent` 도구로 호출한다 (`subagent_type: "general-purpose"`, `model: "opus"` 명시), 마찬가지로 프롬프트에서 정의 파일을 먼저 읽게 한다:
+`Agent` 도구로 호출한다 (`subagent_type: "general-purpose"`, `model: "sonnet"` 명시 — 심각도 판단과 원문 요약에는 어느 정도의 추론이 필요하지만 opus 수준까지는 필요 없다), 마찬가지로 프롬프트에서 정의 파일을 먼저 읽게 한다:
 
 - 먼저 읽을 파일: `.claude/agents/security-news-summarizer.md` (역할 정의), `.claude/skills/security-news-summarize/SKILL.md` (작성 절차)
 - 프롬프트에 Phase 1에서 생성된 `_collected.json` 경로를 전달한다.
 - 결과: `reports/security-digest/{날짜}.md` + 다이제스트 본문 텍스트 반환.
 
-## Phase 3: 결과 전달
+## Phase 3: 이메일 발송
+
+에이전트를 새로 호출하지 않고, 오케스트레이터가 직접 Bash로 번들 스크립트를 실행한다 (LLM 추론이 필요 없는 기계적 작업이므로 토큰을 쓰지 않는다):
+
+```
+python .claude/skills/security-news-digest/scripts/send_digest_email.py reports/security-digest/{날짜}.md {날짜}
+```
+
+- 필요한 환경변수: `GMAIL_USER`(발신 계정), `GMAIL_APP_PASSWORD`(Google 앱 비밀번호), `DIGEST_RECIPIENT`(수신자, 없으면 발신 계정으로 자기 자신에게 발송).
+- 환경변수가 없거나 스크립트가 실패하면(exit code != 0) 발송을 건너뛰고 그 사실을 Phase 4 결과 보고에 포함한다 — 다이제스트 생성 자체는 이미 끝났으므로 실패로 처리하지 않는다.
+- 스크립트가 없거나(최초 실행 전) 사용자가 이메일 발송을 원치 않는 세션(로컬 수동 실행 등)이면 이 Phase를 건너뛸 수 있다.
+
+## Phase 4: 결과 전달
 
 - 요약 에이전트가 반환한 다이제스트 본문을 사용자(또는 스케줄 실행 로그)에게 그대로 보여준다.
 - 저장된 파일 경로(`reports/security-digest/{날짜}.md`)를 함께 안내한다.
 - 한쪽 출처라도 수집 실패였다면, 다이제스트 상단 경고 문구가 포함되어 있는지 확인하고 별도로도 한 줄 언급한다.
+- 이메일 발송 성공/실패 여부를 한 줄로 알린다.
 
 ## 데이터 전달 프로토콜
 
@@ -50,23 +63,28 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 |------|------|
 | 오케스트레이터 → 수집 에이전트 | 반환값 기반 (Agent 호출 결과) + 파일 기반 (`_collected.json`) |
 | 수집 에이전트 → 요약 에이전트 | 파일 기반 (`_collected.json`), 오케스트레이터가 파일 경로를 다음 Agent 호출 프롬프트에 명시 |
+| 요약 에이전트 → 이메일 발송 | 파일 기반 (`reports/security-digest/{날짜}.md`), 오케스트레이터가 Bash로 스크립트에 경로 전달 |
 | 요약 에이전트 → 사용자 | 반환값 기반 (다이제스트 본문) + 파일 기반 (`reports/security-digest/{날짜}.md`) |
 
 ## 에러 핸들링
 
 - 수집 에이전트가 한 출처만 실패해도 계속 진행한다 (수집 에이전트 자체 원칙과 동일). 두 출처 모두 실패하면 요약 단계를 생략하지 않고, 요약 에이전트가 "수집 실패" 안내문을 작성하도록 그대로 호출한다 — 사용자가 상황을 알아야 한다.
 - 수집 에이전트 호출 자체가 실패(예: 도구 오류)하면 1회 재시도 후, 재실패 시 사용자에게 실패 사실과 사유를 알리고 중단한다.
+- 이메일 발송 실패(SMTP 인증 오류, 환경변수 누락 등)는 전체 워크플로우를 실패로 만들지 않는다. 다이제스트 파일은 이미 저장소에 저장되어 있으므로, 실패 사유를 결과 보고에 남기고 종료한다.
 
 ## 후속 작업 지원
 
 다음 요청은 모두 이 스킬이 처리한다:
 - "오늘 보안뉴스 요약해줘" → 전체 실행
-- "KISA 공지만 다시 확인해줘" → Phase 1 부분 재실행(KISA만) + Phase 2
-- "다이제스트 톤 좀 더 간결하게 다시 써줘" → Phase 2만 재실행
+- "KISA 공지만 다시 확인해줘" → Phase 1 부분 재실행(KISA만) + Phase 2, 3
+- "다이제스트 톤 좀 더 간결하게 다시 써줘" → Phase 2만 재실행 (Phase 3 이메일 재발송 여부는 사용자에게 확인)
+- "다이제스트 메일 다시 보내줘" → 오늘자 `reports/security-digest/{날짜}.md`가 이미 있으면 Phase 3만 재실행
 - 매일 08:00 KST 스케줄 트리거 → 전체 실행 (상태 파일 기준 자동으로 신규분만 처리)
 
 ## 테스트 시나리오
 
-**정상 흐름:** state.json 없음 → 수집 에이전트가 최근 1일치 boannews/KISA 항목 수집 → collected.json 생성 → 요약 에이전트가 심각도순 다이제스트 작성 → reports/security-digest/{오늘}.md 저장 및 본문 반환.
+**정상 흐름:** state.json 없음 → 수집 에이전트(haiku)가 최근 1일치 boannews/KISA 항목 수집 → collected.json 생성 → 요약 에이전트(sonnet)가 심각도순 다이제스트 작성 → reports/security-digest/{오늘}.md 저장 및 본문 반환 → 이메일 발송 스크립트 실행 → 사용자에게 본문 + 발송 결과 보고.
 
-**에러 흐름:** KISA 사이트 접속 실패(네트워크 오류) → 수집 에이전트가 boannews만 성공으로 채워 반환(`kisa_boho.status: "failed"`) → 요약 에이전트가 다이제스트 최상단에 "⚠️ KISA 보호나라 수집 실패" 경고를 포함해 나머지(boannews) 항목으로 정상 다이제스트 작성 → 사용자에게 실패 사실 별도 안내.
+**에러 흐름 1 (수집 실패):** KISA 사이트 접속 실패(네트워크 오류) → 수집 에이전트가 boannews만 성공으로 채워 반환(`kisa_boho.status: "failed"`) → 요약 에이전트가 다이제스트 최상단에 "⚠️ KISA 보호나라 수집 실패" 경고를 포함해 나머지(boannews) 항목으로 정상 다이제스트 작성 → 이메일은 정상 발송 → 사용자에게 수집 실패 사실 별도 안내.
+
+**에러 흐름 2 (발송 실패):** 다이제스트는 정상 생성됐으나 `GMAIL_APP_PASSWORD`가 만료/누락 → 이메일 스크립트가 SMTP 인증 오류로 종료 → 워크플로우는 실패 처리하지 않고, 다이제스트 파일 경로와 함께 "이메일 발송 실패: 인증 오류, GMAIL_APP_PASSWORD 확인 필요"를 결과에 포함.

@@ -2,7 +2,7 @@
 name: security-news-summarizer
 description: 수집된 보안뉴스/KISA 보안공지 원자료(_collected.json)를 읽어 한국어 데일리 다이제스트를 작성하는 에이전트. 중요도 순 정렬, 핵심 요약, 조치 필요 항목 강조를 담당한다.
 tools: Read, Write, WebFetch
-model: opus
+model: sonnet
 ---
 
 ## 핵심 역할
