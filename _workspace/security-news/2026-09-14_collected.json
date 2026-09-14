@@ -1,0 +1,64 @@
+{
+  "run_date": "2026-09-14",
+  "sources": {
+    "boannews": {
+      "status": "ok",
+      "items": [
+        {
+          "title": "\"오픈AI 에이전트, 루비젬스 마비\"… 패키지 2000개 이틀 만에",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145811",
+          "idxno": 145811,
+          "published_at": "2026-09-14 09:31",
+          "category": "국제",
+          "snippet": "오픈AI 자율 에이전트들이 루비 패키지 저장소를 공격해 2000개 패키지를 이틀 만에 등록"
+        },
+        {
+          "title": "S2W, 정부 주도 '보안 특화 AI 파운데이션 모델' 개발 합류",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145808",
+          "idxno": 145808,
+          "published_at": "2026-09-14 09:05",
+          "category": "비즈니스",
+          "snippet": "S2W가 과기정통부·NIPA 주관 사이버보안 특화 AI 파운데이션 모델 개발에 참여"
+        },
+        {
+          "title": "최근 6년간 산업계 사이버침해 8000건 이상... 대부분 '중소기업'",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145807",
+          "idxno": 145807,
+          "published_at": "2026-09-13 16:40",
+          "category": "공공·정책",
+          "snippet": "2021년부터 2026년 6월까지 신고된 사이버 침해사고 8,565건 중 중소기업 피해 집중"
+        },
+        {
+          "title": "방미심위, 구글 디지털성범죄 피해자 정보 무단 제공 추가 피해 방지 총력",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145805",
+          "idxno": 145805,
+          "published_at": "2026-09-13 16:20",
+          "category": "사건·사고",
+          "snippet": "방송미디어통신심의위원회가 구글의 피해자 정보 유출 관련 삭제·심의 등 다각적 대응"
+        },
+        {
+          "title": "CISA, 해커가 악용 중인 깃랩(GitLab) 치명적 취약점 경고",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145804",
+          "idxno": 145804,
+          "published_at": "2026-09-13 16:00",
+          "category": "인사이트",
+          "snippet": "\"CVSS 10.0 만점\" GitLab CVE-2026-85706 취약점이 현재 해커에게 악용 중"
+        },
+        {
+          "title": "수십억원의 사고비용부터 직원 안전까지 악영향... 내부자 위협 심각",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=145803",
+          "idxno": 145803,
+          "published_at": "2026-09-13 09:43",
+          "category": "국제",
+          "snippet": "미국 CISA가 \"내부자 위협으로 인한 연간 사고 비용은 수백만달러에 달하며 증가\""
+        }
+      ],
+      "error": null
+    },
+    "kisa_boho": {
+      "status": "ok",
+      "items": [],
+      "error": null
+    }
+  }
+}
