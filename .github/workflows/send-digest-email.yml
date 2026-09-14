@@ -9,6 +9,7 @@ on:
 jobs:
   send-email:
     runs-on: ubuntu-latest
+    environment: MAILSECU
     steps:
       - uses: actions/checkout@v4
         with:
