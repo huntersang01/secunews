@@ -16,16 +16,20 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 - `_workspace/security-news/state.json` 존재 여부
   - **없음** → 초기 실행. 최근 1일치만 수집.
   - **있음** → 이후 실행. 상태 파일 기준 신규 항목만 수집.
-- 오늘 날짜(`{YYYY-MM-DD}`)의 `_workspace/security-news/{날짜}_collected.json`이 이미 있는지 확인
-  - **있고, 사용자가 "다시 요약"/"톤 수정" 등 요약만 재요청** → Phase 2(요약)만 재실행, Phase 1(수집) 건너뜀
-  - **있고, 사용자가 "다시 수집"/특정 소스 재수집 요청** → 해당 소스만 Phase 1 재실행 후 Phase 2 재실행
-  - **없음** → Phase 1부터 정상 실행
+- 오늘 날짜(`{YYYY-MM-DD}`)의 `_workspace/security-news/{날짜}_collected.json`이 이미 있는지 확인하고, 있으면 내용도 읽는다:
+  - **있고 적어도 한 출처가 `"status": "ok"`** → GitHub Actions(`.github/workflows/fetch-security-news.yml`)가 이미 수집을 끝낸 것이다. **Phase 1을 완전히 건너뛴다** (Agent 호출도 하지 않는다 — 토큰을 쓸 필요가 없다). 바로 Phase 2로 진행한다.
+  - **있지만 두 출처 모두 `"status": "failed"`** → GitHub Actions도 실패했거나 아직 못 돌았다는 뜻. Phase 1을 실행해서 LLM 기반 폴백(WebFetch) 수집을 한 번 더 시도한다.
+  - **없음** → 아직 GitHub Actions 사전수집이 안 된 것. Phase 1부터 정상 실행 (LLM 기반 수집 시도).
+  - 사용자가 "다시 요약"/"톤 수정"만 요청 → Phase 2만 재실행, Phase 1 건너뜀 (위 판단과 무관하게 사용자 요청이 우선).
+  - 사용자가 "다시 수집"/특정 소스 재수집을 명시적으로 요청 → 위 판단과 무관하게 Phase 1을 강제 실행.
 
-## Phase 1: 수집
+## Phase 1: 수집 (GitHub Actions 사전수집 실패/누락 시에만 실행)
+
+이 Phase는 Phase 0에서 "실행 필요"로 판단됐을 때만 진행한다. 조건을 만족하지 않으면(=GitHub Actions가 이미 성공) 이 섹션 전체를 건너뛰고 Phase 2로 간다.
 
 `Agent` 도구로 호출한다 (`subagent_type: "general-purpose"`, `model: "haiku"` 명시 — 목록 추출·필터링은 고급 추론이 필요 없는 기계적 작업이라 가장 저렴한 모델로 충분하다). 이 환경의 Agent 도구는 커스텀 이름을 `subagent_type`으로 직접 받지 않으므로, 프롬프트 안에서 에이전트 정의 파일과 스킬 파일을 먼저 읽고 그 역할을 따르도록 명시해야 한다:
 
-- 먼저 읽을 파일: `.claude/agents/security-news-collector.md` (역할 정의), `.claude/skills/security-news-collect/SKILL.md` (수집 절차)
+- 먼저 읽을 파일: `.claude/agents/security-news-collector.md` (역할 정의), `.claude/skills/security-news-collect/SKILL.md` (수집 절차 — GitHub Actions 사전수집 확인 로직 포함)
 - 프롬프트에 실행 날짜(오늘, KST 기준)를 명시한다.
 - 부분 재수집 요청이면 프롬프트에 "보안뉴스만" 또는 "KISA만" 재수집하라고 범위를 명시한다.
 - 결과: `_workspace/security-news/{날짜}_collected.json`, `_workspace/security-news/state.json` 갱신.
@@ -83,7 +87,9 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 
 ## 테스트 시나리오
 
-**정상 흐름:** state.json 없음 → 수집 에이전트(haiku)가 최근 1일치 boannews/KISA 항목 수집 → collected.json 생성 → 요약 에이전트(sonnet)가 심각도순 다이제스트 작성 → reports/security-digest/{오늘}.md 저장 및 본문 반환 → 커밋/push → GitHub Actions가 push 감지, `send_digest_email.py` 실행해 이메일 발송 → 사용자에게 본문 + push 완료 안내.
+**정상 흐름 (평상시, GitHub Actions 사전수집 성공):** GitHub Actions가 07:40 KST에 `scripts/fetch_security_news.py`로 이미 오늘자 `_collected.json`(status: ok)과 `state.json`을 커밋해둔 상태 → 08:00 KST 루틴 실행 시 Phase 0에서 이를 감지 → Phase 1(수집 Agent 호출) 완전히 건너뜀 → 요약 에이전트(sonnet)가 바로 심각도순 다이제스트 작성 → reports/security-digest/{오늘}.md 저장 및 본문 반환 → 커밋/push → GitHub Actions가 push 감지, `send_digest_email.py` 실행해 이메일 발송.
+
+**정상 흐름 (GitHub Actions 사전수집 실패 시 폴백):** state.json 없음 또는 오늘자 collected.json이 두 출처 모두 실패 → 수집 에이전트(haiku)가 최근 1일치 boannews/KISA 항목 WebFetch로 직접 수집 시도 → collected.json 생성 → 이후 동일.
 
 **에러 흐름 1 (수집 실패):** KISA 사이트 접속 실패(네트워크 오류) → 수집 에이전트가 boannews만 성공으로 채워 반환(`kisa_boho.status: "failed"`) → 요약 에이전트가 다이제스트 최상단에 "⚠️ KISA 보호나라 수집 실패" 경고를 포함해 나머지(boannews) 항목으로 정상 다이제스트 작성 → push → 이메일은 정상 발송(GitHub Actions) → 사용자에게 수집 실패 사실 별도 안내.
 

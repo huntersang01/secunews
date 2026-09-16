@@ -5,7 +5,15 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지 게시
 
 # 보안뉴스/KISA 공지 수집 절차
 
-## 왜 이런 절차가 필요한가
+## 우선 확인: GitHub Actions가 이미 수집해뒀는가
+
+클라우드 루틴 환경은 외부 웹 접속(WebFetch/curl)이 egress 정책으로 차단될 수 있다 (2026-09-16부터 확인된 이슈, CLAUDE.md 참고). 이를 우회하기 위해 `.github/workflows/fetch-security-news.yml`이 매일 07:40 KST에 GitHub Actions에서 `scripts/fetch_security_news.py`를 실행해 두 사이트를 미리 수집하고, `_workspace/security-news/{오늘날짜}_collected.json`과 `state.json`을 직접 커밋해둔다 (LLM 호출 없이 순수 스크립트라 토큰도 안 쓴다).
+
+**이 에이전트가 호출되면 가장 먼저 할 일**: `_workspace/security-news/{오늘날짜}_collected.json`이 이미 존재하고, 적어도 한 출처가 `"status": "ok"`인지 확인한다.
+- **있으면** (GitHub Actions가 정상적으로 미리 수집해둔 경우) — 아래의 WebFetch 수집 절차는 전부 건너뛴다. 그 파일을 그대로 최종 결과로 인정하고, 각 출처의 상태/건수만 요약해서 보고한 뒤 종료한다. state.json도 이미 그 스크립트가 갱신해뒀으므로 손댈 필요 없다.
+- **없거나, 있어도 두 출처 모두 `"status": "failed"`인 경우** (GitHub Actions가 아직 안 돌았거나 실패한 경우) — 아래 WebFetch 기반 절차로 직접 수집을 시도한다 (환경에 따라 여전히 막힐 수 있다 — 막히면 정직하게 실패로 기록한다).
+
+## 왜 이런 절차가 필요한가 (WebFetch 폴백 경로)
 
 두 사이트 모두 목록 페이지가 서버 렌더링 HTML이라 WebFetch로 직접 읽을 수 있다. 하지만 매일 반복 수집하는 작업이므로, 매번 전체 목록을 다시 요약해 넘기면 중복이 쌓이고 다음 단계(요약 에이전트)의 컨텍스트가 낭비된다. 그래서 "이전 실행 이후의 신규 항목만" 걸러내는 상태 관리가 핵심이다.
 

@@ -1,0 +1,27 @@
+name: Fetch security news
+
+on:
+  schedule:
+    - cron: '40 22 * * *'  # 07:40 KST, ~20 min before the Claude routine's 08:00 KST run
+  workflow_dispatch: {}
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and parse listings
+        run: python3 scripts/fetch_security_news.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "secunews-bot@users.noreply.github.com"
+          git config user.name "SecuNews Bot"
+          git add _workspace/security-news
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "Fetch security news for $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git push
+          fi
