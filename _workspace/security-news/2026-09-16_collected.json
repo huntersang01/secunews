@@ -4,12 +4,12 @@
     "boannews": {
       "status": "failed",
       "items": [],
-      "error": "Network access denied: CONNECT tunnel failed with 403 Forbidden. The destination host www.boannews.com is blocked by organization egress policy."
+      "error": "Network access denied: EGRESS_BLOCKED. The destination host www.boannews.com is blocked by organization egress policy."
     },
     "kisa_boho": {
       "status": "failed",
       "items": [],
-      "error": "Network access denied: CONNECT tunnel failed with 403 Forbidden. The destination host www.boho.or.kr is blocked by organization egress policy."
+      "error": "Network access denied: EGRESS_BLOCKED. The destination host www.boho.or.kr is blocked by organization egress policy."
     }
   }
 }
