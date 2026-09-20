@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-09-21",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "EGRESS_BLOCKED: Access to www.boannews.com blocked by network egress proxy"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "EGRESS_BLOCKED: Access to www.boho.or.kr blocked by network egress proxy"
+    }
+  }
+}
