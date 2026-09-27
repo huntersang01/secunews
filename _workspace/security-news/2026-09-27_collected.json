@@ -2,14 +2,31 @@
   "run_date": "2026-09-27",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "EGRESS_BLOCKED: Access to www.boannews.com is blocked by the network egress proxy."
+      "status": "ok",
+      "items": [
+        {
+          "title": "보조배터리, 기내 안전의 가장 약한 고리",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146043",
+          "idxno": 146043,
+          "published_at": "09-26 10:21",
+          "category": null,
+          "snippet": "추석 연휴인 9월 24일, 인천공항에서 다낭으로 출발하려던 여객기의 승객 가방에서 불이 났다. 발화 원인은 조사 결과를 기다려야 하지만, 비행기 안에서 리튬 배터리가 연기를 뿜는 일이 더는 드문 뉴스가 아니라는 사실은 분명하다.올해만 해도 1월 중국 싼야에서 청주로 오던 항공기에서 가방 속 보조배터리 연기로 승무원 3명이 병원에 실려갔고, 7월에는 인천을 떠나 필리핀 칼리보로 가던 항공기에서 이륙 직후 불꽃이 튀었다. ‘미국 연방항공청’(FAA)이 확인한 항공기 리튬 배터리 연기·화재·과열 사건은 2024년 89건으로 역대 최다를"
+        },
+        {
+          "title": "해커 표적 된 라디오 방송... 극동방송 후원 시스템 해킹 피해",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146045",
+          "idxno": 146045,
+          "published_at": "09-26 17:29",
+          "category": null,
+          "snippet": "극동방송이 후원자 관리 시스템에 침해 정황을 확인하고 개인정보 유출 피해 예방을 위한 긴급 대응에 나섰다. 극동방송은 개신교계 선교 라디오 방송국으로, 일반적 뉴스나 예능 같은 기능 없이 선교 사역에 주력하고 있는 특수방송사다.극동방송에 따르면, 23일 오후 5시경 후원자 관리 시스템에 외부의 권한 없는 접근이 발생한 정황이 최초 확인됐다. 극동방송은 즉시 사실관계 조사에 착수, 비정상적 접근이 18일 오후 11시경 발생한 것으로 파악했다.조사 결과, 현재 영향을 받았을 가능성이 있는 개인정보 항목은 △성명 △ 생년월일 △휴대전화번"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
+      "status": "ok",
       "items": [],
-      "error": "EGRESS_BLOCKED: Access to www.boho.or.kr is blocked by the network egress proxy."
+      "error": null
     }
   }
 }
