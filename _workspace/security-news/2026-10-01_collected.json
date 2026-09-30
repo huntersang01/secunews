@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-01",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "EGRESS_BLOCKED: boannews.com에 접속할 수 없습니다 (환경 네트워크 차단)"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "EGRESS_BLOCKED: boho.or.kr에 접속할 수 없습니다 (환경 네트워크 차단)"
+    }
+  }
+}
