@@ -2,14 +2,47 @@
   "run_date": "2026-10-06",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "EGRESS_BLOCKED: Access to www.boannews.com blocked by network egress proxy (retried once, still blocked)"
+      "status": "ok",
+      "items": [
+        {
+          "title": "[배종찬의 보안 빅데이터] AI 해킹으로 무너진 금융권 보안",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146195",
+          "idxno": 146195,
+          "published_at": "10-05 15:13",
+          "category": null,
+          "snippet": "2026년 10월 초, 국내 금융권이 인공지능(AI)을 악용한 고도화된 해킹 공격에 동시다발적으로 노출되며 전대미문의 보안 재난에 직면했다. 썸트렌드(SomeTrend)의 2026년 10월 1일부터 3일까지의 빅데이터 연관어 분석 결과에 따르면, 이번 사태를 둘러싼 시장과 대중의 관심은 ‘금융기관’과 ‘고객정보’라는 두 가지 핵심 축을 중심으로 뚜렷하게 형성되어 있다.본래 금융기관 영역은 상품, 조건, 투자, 자금, 비용, 세금, 계약, 기준, 계획, 일정 등 정량적 금융 거래 및 자산 운용 요소와 주로 결합해 있었다. 그러나 이번"
+        },
+        {
+          "title": "서울사이버대, 학생과 교직원은 물론 졸업생까지 개인정보 유출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146196",
+          "idxno": 146196,
+          "published_at": "10-05 23:11",
+          "category": null,
+          "snippet": "서울사이버대학교는 학생과 졸업생, 교직원과 채용지원자들의 개인정보가 유출된 정황이 발견됐다고 밝혔다. 특히 서울사이버대학교는 개인정보 유출을 직접 확인한 것이 아닌 한국인터넷진흥원으로부터 통지받은 것으로 알려졌다.이번에 유출된 개인정보는 학생과 졸업생의 경우 △성명 △학번 △생년월일 △연락처 △이메일 △주소 △학과 △학적상태 △입학·학력 정보 등이며, 교직원은 △성명 △사번 △소속 △연락처 △이메일 등이다. 또한 학생과 졸업생, 교직원 공통으로 암호화된 정보로 △주민등록번호 △본교 포털 비밀번호 △계좌번호 등이 유출됐으며, 현재까지"
+        },
+        {
+          "title": "LG유플러스-우리은행, AI 통화앱 ‘익시오’ 연동해 보이스피싱 선제 차단",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146201",
+          "idxno": 146201,
+          "published_at": "10-06 10:00",
+          "category": null,
+          "snippet": "LG유플러스가 우리은행과 손잡고 통신과 금융 데이터를 실시간으로 연계해 보이스피싱 피해를 원천 차단하는 ‘익시오 보이스피싱 금융안심’ 서비스를 선보인다고 6일 밝혔다.금융권의 보이스피싱 대응은 주로 계좌이체 등 사후 금융거래 정보를 중심으로 진행돼, 고객이 사기범과 의심 번호로 통화하거나 악성 앱에 감염됐는지, AI 변조 음성에 노출됐는 지 등 실제 금융거래 이전 단계의 위험 신호를 파악하는 데 한계가 있었다. ‘익시오 보이스피싱 금융안심’ 서비스는 LG유플러스가 보유한 보이스피싱 위험 탐지 데이터를 활용해 금융권 단독으로는 접근하"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
-      "items": [],
-      "error": "EGRESS_BLOCKED: Access to www.boho.or.kr blocked by network egress proxy (retried once, still blocked)"
+      "status": "ok",
+      "items": [
+        {
+          "title": "Apache 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72208",
+          "nttId": 72208,
+          "published_at": "2026-10-06",
+          "snippet": null
+        }
+      ],
+      "error": null
     }
   }
 }
