@@ -26,9 +26,15 @@ jobs:
           fi
           echo "file=$FILE" >> "$GITHUB_OUTPUT"
           echo "date=$(basename "$FILE" .md)" >> "$GITHUB_OUTPUT"
+          if grep -qE "수집 실패|⚠️" "$FILE"; then
+            echo "digest is a collection-failure notice (GitHub Actions fetch hadn't succeeded yet) - will not email this; the later correction will"
+            echo "is_failure=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_failure=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Send email
-        if: steps.find.outputs.file != ''
+        if: steps.find.outputs.file != '' && steps.find.outputs.is_failure != 'true'
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}

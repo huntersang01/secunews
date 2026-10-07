@@ -65,6 +65,8 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 
 `reports/security-digest/` 아래 파일이 push되는 순간 GitHub Actions가 자동으로 감지해 이메일을 보낸다 (LLM 호출 없이 GitHub 워크플로우 러너에서 `scripts/send_digest_email.py`를 직접 실행 — 토큰을 전혀 쓰지 않는다). git 커밋 identity가 없다는 오류가 나면 `git config user.email "secunews-bot@users.noreply.github.com"`과 `git config user.name "SecuNews Bot"`을 로컬로 설정한 뒤 다시 커밋한다.
 
+**실패 안내문은 이메일로 안 간다**: `send-digest-email.yml`은 push된 파일에 "⚠️"나 "수집 실패" 문구가 있으면 이메일 발송 자체를 건너뛴다(저장소에는 그대로 커밋/기록된다). GitHub Actions의 fetch 예약 실행이 체계적으로 2~3시간씩 늦는 것이 확인돼(2026-10-08, CLAUDE.md 참고), 08:00 KST 정시 실행에서는 거의 매일 데이터가 아직 없어 실패 안내문이 나올 수밖에 없는데, 이걸 그대로 이메일로 보내면 사용자에게 매일 "실패 메일 → 2~3시간 뒤 정정 메일" 두 통이 간다. 그래서 실패 안내문은 push/기록만 하고 조용히 넘어가며, 나중에 webhook이 실제 데이터로 재작성한 push에만 이메일이 간다 — 결과적으로 사용자는 하루에 (늦더라도) 정확한 내용의 이메일을 한 통만 받는다.
+
 ## Phase 4: 결과 전달
 
 - 요약 에이전트가 반환한 다이제스트 본문을 사용자(또는 스케줄 실행 로그)에게 그대로 보여준다.
@@ -107,6 +109,6 @@ description: 보안뉴스(boannews.com)와 KISA 보호나라 보안공지를 수
 
 **에러 흐름 2 (발송 실패):** 다이제스트는 정상 push됐으나 GitHub Secrets의 `GMAIL_APP_PASSWORD`가 만료 → GitHub Actions의 `send_digest_email.py`가 SMTP 인증 오류로 종료(이 세션은 이 실패를 알 수 없음) → 사용자가 이메일을 못 받았다고 문의하면, 저장소 Actions 탭에서 실패 로그를 확인하도록 안내하고 GitHub Secrets 값을 재확인/재발급하도록 안내한다.
 
-**에러 흐름 3 (GitHub Actions 스케줄 지연/누락 — webhook 자동 보정):** GitHub의 cron 스케줄러가 지연되거나 그날 아예 발동하지 않아(플랫폼 자체의 알려진 한계), `fetch-security-news.yml`이 08:00 KST 이전에 못 끝남 → 08:00 KST 루틴 실행 시 오늘자 collected.json이 없거나 두 출처 모두 실패 → Phase 1 폴백도 실패(egress 차단) → "수집 실패" 안내 다이제스트를 push, 이메일도 그 내용으로 발송됨 → 이후 GitHub Actions가 뒤늦게 성공해서 push하면, 그 push가 이 루틴을 webhook으로 다시 트리거 → Phase 0의 재실행 가드가 "실패 안내문 + 지금은 성공"을 감지 → Phase 2~3을 다시 돌려 실제 데이터로 다이제스트를 새로 만들어 덮어쓰고 재push → 두 번째(정확한) 이메일이 자동으로 감. 이 경우 사용자에게는 그날 이메일이 두 통(실패 안내 → 정정본) 갈 수 있다는 점을 알아두면 좋다.
+**에러 흐름 3 (GitHub Actions 스케줄 지연/누락 — webhook 자동 보정, 이메일은 한 통만):** GitHub의 cron 스케줄러가 지연되거나(2026-10-08 기준 매일 2~3시간씩 체계적으로 지연되는 것으로 확인됨) 그날 아예 발동하지 않아, `fetch-security-news.yml`이 08:00 KST 이전에 못 끝남 → 08:00 KST 루틴 실행 시 오늘자 collected.json이 없거나 두 출처 모두 실패 → Phase 1 폴백도 실패(egress 차단) → "수집 실패" 안내 다이제스트를 push하지만, `send-digest-email.yml`이 실패 안내문 문구를 감지해 **이메일은 보내지 않는다**(저장소 기록만 남음) → 이후 GitHub Actions가 뒤늦게(보통 2~3시간 뒤) 성공해서 push하면, 그 push가 이 루틴을 webhook으로 다시 트리거 → Phase 0의 재실행 가드가 "실패 안내문 + 지금은 성공"을 감지 → Phase 2~3을 다시 돌려 실제 데이터로 다이제스트를 새로 만들어 덮어쓰고 재push → 이번엔 실패 문구가 없으므로 이메일이 발송됨 → 사용자는 그날 정확한 내용의 이메일을 (늦더라도) 한 통만 받는다.
 
 **에러 흐름 4 (webhook 자기 자신 트리거 — 무한 루프 방지):** 이 루틴 자신이 만든 다이제스트 commit이 push되면 webhook이 다시 이 루틴을 실행시킨다 → Phase 0의 가드가 "오늘자 다이제스트가 이미 있고 실패 안내문이 아니다"를 감지 → 즉시 종료, 아무 것도 재실행/재push하지 않는다.
