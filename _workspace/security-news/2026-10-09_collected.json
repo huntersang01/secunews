@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-09",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 환경 DNS/egress 차단으로 추정)"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 환경 DNS/egress 차단으로 추정)"
+    }
+  }
+}
