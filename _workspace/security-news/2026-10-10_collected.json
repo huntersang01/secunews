@@ -2,14 +2,31 @@
   "run_date": "2026-10-10",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch getaddrinfo ENOTFOUND www.boannews.com (재시도 1회 후에도 동일 실패 — 샌드박스 egress/DNS 차단으로 추정)"
+      "status": "ok",
+      "items": [
+        {
+          "title": "‘골프 예약 앱’까지 줄줄이... 골프몬 이어 카카오 VX, 개인정보 3만 4천명 털렸다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146291",
+          "idxno": 146291,
+          "published_at": "10-09 18:54",
+          "category": null,
+          "snippet": "금융권, 교회 등에 이어 이번엔 골프 예약 앱의 고객정보가 유출됐다. 우리나라를 타깃으로 한 전 방위 해킹 공습이 진행 중이다.카카오 VX가 운영하는 카카오골프예약에서 고객 개인정보 3만 4천여 건이 유출됐다고 밝혔다. 지난 7일 외부의 비인가자가 비정상적인 방법을 통해 서비스에서 고객 정보를 유출한 사실을 확인했다는 게 카카오 VX 측의 설명이다.유출 대상은 지난해 1월부터 올해 10월까지 카카오골프예약에서 국내 투어 상품을 예약한 고객으로 드러났다. 유출 항목에는 이름과 전화번호는 물론 상품명, 라운드 일자, 숙박 정보, 결제"
+        },
+        {
+          "title": "[은행이 뚫린다] 금융권 공격 해커, 디도스 해킹그룹 ‘GodNet/VITAS’ 멤버였다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146292",
+          "idxno": 146292,
+          "published_at": "10-10 10:32",
+          "category": null,
+          "snippet": "AI를 이용해 국내 금융권을 공격했던 범인이 중국계 디도스(DDoS-for-hire) 해킹그룹인 ‘GodNet/VITAS’의 커뮤니티 감독관이었음이 식별됐다. 이번 조사는 최근 해커로 특정된 중국인이 용의자로 지목되자, 휴대전화 등 개인정보가 도용됐다며 해킹 연관성을 부인한 이후 추가로 진행되면서 드러났다.보안기업 로그프레소에 따르면, 크라우드스트라이크가 공개한 ‘38.244.50[.]120’ 주소에서 추출된 Claude Code 마크다운 문서를 기반으로 용의자를 분석한 결과, 텔레그램 계정 ‘YY520CN’이 중국계 DDoS-fo"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
+      "status": "ok",
       "items": [],
-      "error": "WebFetch getaddrinfo ENOTFOUND www.boho.or.kr (재시도 1회 후에도 동일 실패 — 샌드박스 egress/DNS 차단으로 추정)"
+      "error": null
     }
   }
 }
