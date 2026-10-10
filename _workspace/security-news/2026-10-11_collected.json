@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-11",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 외부 egress 차단 추정, CLAUDE.md 2026-09-16 항목 참고)"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 외부 egress 차단 추정, CLAUDE.md 2026-09-16 항목 참고)"
+    }
+  }
+}
