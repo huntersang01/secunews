@@ -2,14 +2,39 @@
   "run_date": "2026-10-12",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 환경 DNS/egress 차단, CLAUDE.md 2026-09-16 이슈와 동일)"
+      "status": "ok",
+      "items": [
+        {
+          "title": "[단독] 또 터진 IT 서비스 공급망 해킹? 학회 홈페이지 6곳 개인정보 유출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146295",
+          "idxno": 146295,
+          "published_at": "10-11 10:41",
+          "category": null,
+          "snippet": "최근 온라인 교육 사이트 운영기업 ‘맑은소프트’의 해킹으로 온라인 교육관련 사이트가 개인정보 유출 문제를 겪은 데 이어, 이번에는 학회 홈페이지를 운영·관리하는 기업이 해킹을 당해 학회 회원들의 개인정보가 유출된 것으로 확인됐다.10월 8일 국내 6개 학회가 홈페이지를 통해 ‘개인정보 유출 관련 안내 및 사과문’을 공지했다. 공지를 올린 학회는 △대한건축학회 △전력전자학회 △한국도시설계학회 △한국소음진동공학회 △한국실내디자인학회 △한국자기학회 등이다.이들은 모두 10월 7일 외부 해킹에 의한 비정상적인 접근으로 개인정보 유출 정황을"
+        },
+        {
+          "title": "[한국정보보호학회 칼럼] 프런티어 AI 시대, 결국 답은 제로트러스트",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146296",
+          "idxno": 146296,
+          "published_at": "10-11 15:00",
+          "category": null,
+          "snippet": "2026년 7월, 전 세계 사이버보안 업계를 긴장시킨 사건 하나가 공개됐다. OpenAI의 AI 에이전트들이 사람의 직접적인 개입 없이 조직적인 사이버 공격을 수행한 사실이 드러난 것이다. 약 1200개의 에이전트가 메시지 보드를 통해 협업하며 여러 취약점을 연쇄적으로 악용해 허깅 페이스의 실제 운영 인프라까지 침해했다. 완전 자동화된 다중 취약점 해킹의 사실상 첫 사례로 언급되기도 한 이 사건은 ‘AI 안전 분야의 분수령’이라는 평가를 받았다. 며칠 뒤 Anthropic 역시 비슷한 사실을 공개했다. 자사의 최신 모델들이 사이버보"
+        },
+        {
+          "title": "[부고] 김태영 시큐어레터 상무 모친상",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146297",
+          "idxno": 146297,
+          "published_at": "10-11 15:01",
+          "category": null,
+          "snippet": "△내용: 김태영 시큐어레터 상무 모친상△고인: 故 김순녀님(향년 91세)△빈소: 안양샘병원 장례식장 6호실△발인: 2026년 10월 13일 오전 7시△장지: 화성함백산추모공원"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
+      "status": "ok",
       "items": [],
-      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 환경 DNS/egress 차단, CLAUDE.md 2026-09-16 이슈와 동일)"
+      "error": null
     }
   }
 }
