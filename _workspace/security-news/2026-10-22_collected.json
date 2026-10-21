@@ -1,0 +1,17 @@
+{
+  "run_date": "2026-10-22",
+  "collection_method": "webfetch_fallback",
+  "github_actions_prefetch": "not_found",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 루틴 환경 egress 차단, 1차/재시도 동일 오류)"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 2회 시도 모두 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 루틴 환경 egress 차단, 1차/재시도 동일 오류)"
+    }
+  }
+}
