@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-23",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패(1회 재시도 포함): getaddrinfo ENOTFOUND www.boannews.com - 클라우드 환경에서 외부 도메인 DNS 해석 실패(egress 차단 추정)"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패(1회 재시도 포함): getaddrinfo ENOTFOUND www.boho.or.kr - 클라우드 환경에서 외부 도메인 DNS 해석 실패(egress 차단 추정)"
+    }
+  }
+}
