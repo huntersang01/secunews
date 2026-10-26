@@ -2,14 +2,55 @@
   "run_date": "2026-10-26",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 실패 (1차 및 재시도 모두): getaddrinfo ENOTFOUND www.boannews.com — DNS 해석 실패로 외부 접속 불가 (egress 차단 추정)"
+      "status": "ok",
+      "items": [
+        {
+          "title": "2026 국방정보기술 워크숍 개최... ‘AI 과학기술강군’ 미래 국방 ICT 한자리에",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146726",
+          "idxno": 146726,
+          "published_at": "10-25 10:45",
+          "category": null,
+          "snippet": "첨단 정보통신기술(ICT)을 군 전반에 융합해 미래 전장 환경을 주도할 ‘인공지능’(AI) 과학기술강군 육성 전략을 논의하는 교류의 장이 열렸다. 군 지휘부와 정부 부처, 산·학·연 정보통신기술 및 보안 전문가들이 한자리에 모여 국방 혁신 방안을 공유하는 ‘2026 국방정보기술 워크숍’이 개최됐다.이번 워크숍은 급변하는 글로벌 안보 지형과 기술 패권 경쟁 속에서 AI와 클라우드, 빅데이터 등 민간의 첨단 디지털 기술을 군 지휘통제 및 작전 체계에 신속히 접목하기 위한 해법을 모색하기 위해 마련됐다. 행사에는 각 군 정보화·통신 분야"
+        },
+        {
+          "title": "“공장 멈추는 랜섬웨어 막는다” 안랩, 일본서 IT·OT 통합 CPS 솔루션 제시",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146728",
+          "idxno": 146728,
+          "published_at": "10-25 11:45",
+          "category": null,
+          "snippet": "일본 제조 현장을 겨냥한 랜섬웨어 공격이 잇따르며 설비 운영 중단 우려가 커진 가운데, 안랩이 정보기술(IT)과 ‘운영기술’(OT)을 아우르는 통합 보안 체계를 앞세워 현지 시장 공략에 속도를 낸다.안랩은 지난 21일부터 23일까지 일본 도쿄에서 열린 정보보안 전문 전시회 ‘시큐리티 데이즈 폴 2026 도쿄’(Security Days Fall 2026 Tokyo)에 참가해 ‘사이버물리시스템’(CPS) 보안 전략과 솔루션을 선보였다고 25일 밝혔다. 지난 6월 ‘인터롭 도쿄 2026’ 출전에 이어 일본 내 신규 사업 기회를 발굴하기"
+        },
+        {
+          "title": "로그프레소, ‘PHP2셸’ 진단 앱 출시... “외부 노출 넘어 내부망까지 전수조사”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146733",
+          "idxno": 146733,
+          "published_at": "10-26 09:32",
+          "category": null,
+          "snippet": "PHP 원격 코드 실행 취약점 ‘PHP2셸’(PHP2Shell) 위협이 고조되는 가운데, 외부 서비스뿐 아니라 사내망에 숨은 취약 자산까지 손쉽게 찾아내는 전용 진단 도구가 나왔다.로그프레소는 PHP2셸 취약점을 진단하는 ‘PHP2셸 스캐너’ 앱을 자사 스토어에 공개했다고 26일 밝혔다. 21일 취약점 식별과 임시 조치 방안을 담은 기술 권고문을 게시한 데 이어, 24일 고객 대상 진단 도구를 선보이며 실질적인 대응 지원에 나섰다.PHP2셸은 웹 개발 언어 PHP의 코어 엔진에서 발견된 원격 코드 실행(RCE) 결함인 ‘CVE-20"
+        },
+        {
+          "title": "에프원시큐리티, ‘PHP2셸’ 차단 검증 완료... 무료 웹 진단 도구 배포",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146735",
+          "idxno": 146735,
+          "published_at": "10-26 09:27",
+          "category": null,
+          "snippet": "글로벌 웹 인프라를 위협하는 ‘PHP2셸’(PHP2Shell) 원격 코드 실행 취약점에 대응해 국내 보안 기업이 웹 방화벽을 통한 실전 차단 성능을 검증하고 무료 점검 도구 보급에 나섰다.에프원시큐리티는 최근 공개된 PHP 코어 엔진 원격 코드 실행(RCE) 취약점 ‘PHP2셸’에 대해 자사 통합 웹 보안 서비스 ‘UWSS’(Unified Web Security Service)의 탐지 및 차단 성능 검증을 마쳤다고 26일 밝혔다. 취약점 노출 여부를 판별할 수 있는 기업용 무료 자가진단 도구도 함께 배포했다.‘PHP2셸’은 PHP"
+        },
+        {
+          "title": "롯데 모바일 상품권 ‘기프티엘’ 털렸다... 1만8359명 계좌번호 유출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146737",
+          "idxno": 146737,
+          "published_at": "10-26 09:29",
+          "category": null,
+          "snippet": "롯데그룹 계열 모바일 교환권 플랫폼 ‘기프티엘’(giftiel)이 외부 해킹 공격을 받아 1만8000여명의 고객 개인정보와 계좌번호가 유출됐다.기프티엘을 운영하는 스푼은 홈페이지에 개인정보 유출 사실 안내 및 사과문을 게시하고, 22일 외부 비인가 접근(해킹)으로 인해 일부 고객의 개인정보가 유출된 사실을 확인했다고 밝혔다. 이번 침해 사고로 정보가 유출된 피해 고객은 1만8359명으로 파악됐다.확인된 유출 항목은 △이름 △휴대폰번호 △이메일 △환불 계좌번호 등 4개 항목이다. 일반적인 연락처 정보에 더해 상품권 환불 과정에서 등록"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
+      "status": "ok",
       "items": [],
-      "error": "WebFetch 실패 (1차 및 재시도 모두): getaddrinfo ENOTFOUND www.boho.or.kr — DNS 해석 실패로 외부 접속 불가 (egress 차단 추정)"
+      "error": null
     }
   }
 }
