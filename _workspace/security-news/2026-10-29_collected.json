@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-29",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "egress 차단: 프록시 CONNECT가 403 응답(정책 거부). WebFetch는 getaddrinfo ENOTFOUND www.boannews.com (WebFetch 1회 시도, 실패 후 curl로 프록시 경유 재확인도 403). 세션 네트워크 허용 목록에 www.boannews.com 추가 필요."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "egress 차단: 프록시 CONNECT가 403 응답(정책 거부). WebFetch는 getaddrinfo ENOTFOUND www.boho.or.kr (WebFetch 1회 시도, 실패 후 curl로 프록시 경유 재확인도 403). 세션 네트워크 허용 목록에 www.boho.or.kr 추가 필요."
+    }
+  }
+}
