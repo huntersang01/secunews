@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-10-31",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 네트워크 허용 도메인 밖이거나 DNS 해석 불가). 1회 시도 후 중단."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 네트워크 허용 도메인 밖이거나 DNS 해석 불가). 1회 시도 후 중단."
+    }
+  }
+}
