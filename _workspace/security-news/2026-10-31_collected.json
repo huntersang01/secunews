@@ -2,14 +2,168 @@
   "run_date": "2026-10-31",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 네트워크 허용 도메인 밖이거나 DNS 해석 불가). 1회 시도 후 중단."
+      "status": "ok",
+      "items": [
+        {
+          "title": "[PHP 파장] 시놀로지 NAS서 취약점 발견... 기업 파일 등 공격 노출 우려",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146891",
+          "idxno": 146891,
+          "published_at": "10-30 11:11",
+          "category": null,
+          "snippet": "네트워크 저장장치(NAS) 제조사 시놀로지(Synology)가 자사 일부 제품에 대한 PHP 취약점 관련 보안 업데이트를 배포했다. 한국인터넷진흥원(KISA)은 시놀로지가 제공하는 이번 보안 업데이트를 실시할 것을 권유하는 공지를 냈다.30일 대만 NAS 제조사 시놀로지는 세계 웹 생태계 주요 프로그래밍 언어 PHP에서 발견된 취약점 ‘PHP2셸’(PHP2Shell)에 자사 NAS 내 실행되는 일부 애플리케이션 및 PHP 모듈이 영향 받을 수 있다고 밝혔다.보안 업데이트 대상은 자체 운영체제 DSM에 적용된 PHP 7.3~8.4 버"
+        },
+        {
+          "title": "국내외 가상자산거래소 노린 해킹, 금전 피해로 이어졌다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146893",
+          "idxno": 146893,
+          "published_at": "10-30 11:30",
+          "category": null,
+          "snippet": "국내외에서 가상자산거래소를 노린 해킹 공격이 계속되면서 실제 금전적 피해로까지 이어졌다. 프라뱅에선 1억원가량의 금전 피해가 발생했으며, 빗썸에선 고객 개인정보가 유출됐다. 세계 최대 가상자산거래소 바이낸스에서도 수십억달러에 달하는 금전 피해가 발생한 것으로 추정된다. 가상자산거래소 빗썸은 29일 사내 시스템 해킹 사고로 고객 6444명의 개인정보가 유출됐다고 밝힌 바 있다. 이 중 5600명의 개인정보는 암호화된 상태로, 실제 844명의 정보만 직접 노출됐다. 임직원 715명의 개인정보도 유출됐다. 빗썸은 이날 홈페이지 공지에서"
+        },
+        {
+          "title": "두산디지털이노베이션, 美 방산 사이버보안 ‘CMMC RPO’ 자격 획득... 시장 진입로 연다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146894",
+          "idxno": 146894,
+          "published_at": "10-30 13:04",
+          "category": null,
+          "snippet": "미국 국방 공급망 진입을 위한 사이버보안 요건이 단계적으로 강화되는 가운데, 국내 방산 및 제조 기업의 미국 시장 진출을 지원하는 공인 컨설팅 체계가 마련됐다. 두산 디지털이노베이션BU(DDI)는 ‘사이버보안 성숙도 모델 인증’(CMMC) 공식 인정기구인 ‘사이버 AB’로부터 ‘공식 컨설팅 기관’(RPO) 자격을 취득했다고 30일 밝혔다.미국 국방부는 방위산업 공급망에 참여하는 세계 협력사들의 보안 수준을 검증하기 위해 CMMC 인증 취득을 의무화하고 있다. 핵심 설계 도면과 미분류 주요 기술 데이터(CUI) 유출을 방지하기 위한"
+        },
+        {
+          "title": "여의시스템, AI 시대 차세대 전력 인프라 네트워크 선보여.. 모싸와 BIXPO 2026 참가",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146895",
+          "idxno": 146895,
+          "published_at": "10-30 11:55",
+          "category": null,
+          "snippet": "여의시스템(대표 성명기·성제현)이 글로벌 산업용 네트워크 전문기업 모싸(Moxa)와 함께 11월 4-6일 광주 김대중컨벤션센터에서 열리는 ‘2026 빛가람국제전력기술엑스포(BIXPO 2026)’에 참가한다.여의시스템과 모싸는 디지털 변전소와 소프트웨어 정의 변전소(Software-Defined Substation), 고가용성 네트워크와 AI 데이터센터 등 차세대 전력 인프라를 위한 네트워크 기술을 선보인다. 하드웨어 중심에서 소프트웨어 정의(Software-Defined)로 진화하는 전력 인프라를 주제로 디지털 변전소와 소프트웨어"
+        },
+        {
+          "title": "“내부망 PHP 장비 96% 취약점 노출”... 지니언스 “NAS·공유기 등 즉시 점검·패치”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146896",
+          "idxno": 146896,
+          "published_at": "10-30 13:31",
+          "category": null,
+          "snippet": "외부 인터넷에 노출된 웹서버보다 기업 내부망에 숨어 있는 장비가 ‘PHP2셸’(PHP2Shell) 악용 위협에 더 심각하다는 실측 분석 결과가 나왔다. 30일 AI 보안 통합 플랫폼 기업 지니언스(대표 이동범)가 인터넷 접점이나 기업 내부망에 연결된 네트워크 연결 스토리지(NAS), 공유기 등 네트워크 장비, 방화벽 등이 사이버 공격의 다음 핵심 타깃이 될 가능성이 매우 높다고 분석했다. 이에 기업 및 기관들의 즉각적인 내부 자산 점검과 선제적 조치를 촉구했다.‘PHP2셸’(PHP2Shell)은 전세계 인터넷 사이트 제작에 널리쓰이"
+        },
+        {
+          "title": "인천국제공항, 네트워크 장애로 출국 수속 차질... “항공기 지연은 없어”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146898",
+          "idxno": 146898,
+          "published_at": "10-30 14:54",
+          "category": null,
+          "snippet": "인천국제공항 항공사 네트워크에서 장애가 발생해 출국수속 절차에 차질이 발생하고 있다. 제1여객터미널 항공사 8곳과 제2여객터미널 5곳에서 통신이 간헐적으로 끊기는 것으로 나타났다.30일 인천국제공항공사에 따르면 이날 오전 4시 30분부터 항공권 발권 시스템을 연결하는 항공사 네트워크에 장애가 발생하고 있다.발권 업무가 지연되면서 각 항공사 체크인 카운터에서는 출국을 앞둔 이용객들이 수속 절차에 불편을 겪고 있다.인천국제공항공사는 항공사들이 이용하는 미국 에어링크(ARINC)의 글로벌 네트워크 불안정이 장애의 요인인 것으로 보고 대책"
+        },
+        {
+          "title": "라쿠텐 마리타임, “IACS 규제 넘어 실전 복원력으로”... ‘MATS 2026’ ‘마리타임 AI & 테크 서밋 2026’ 개최",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146899",
+          "idxno": 146899,
+          "published_at": "10-30 16:16",
+          "category": null,
+          "snippet": "선박의 디지털 전환과 AI 도입이 가속화되면서 사이버보안이 안전 운항과 해상 운영 연속성을 가르는 핵심 변수로 떠오른 가운데, 글로벌 선급과 조선·해운업계가 모여 국제 규제 대응과 사이버 복원력 해법을 논의했다.라쿠텐 심포니의 해양 사이버보안 브랜드 라쿠텐 마리타임(Rakuten Maritime)은 28일 ‘하얏트 플레이스 부산 연산’에서 해사 산업의 AI·디지털화·사이버보안을 다루는 국제 서밋 ‘마리타임 AI & 테크 서밋 2026’(MATS 2026)을 열었다.‘미래 해양 산업으로 나아가는 안전한 이정표’(Navigating a"
+        },
+        {
+          "title": "GS건설 ‘자이’ 입주민 개인정보 유출... 이름, 주소, 연락처에 ‘거주유형’도",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146902",
+          "idxno": 146902,
+          "published_at": "10-30 17:04",
+          "category": null,
+          "snippet": "GS건설 ‘자이’ 아파트 입주민들의 개인정보가 유출됐다. GS건설은 이와 관련 한국인터넷진흥원(KISA) 및 개인정보보호위원회에 신고를 마쳤다.30일 GS건설 자이는 아파트 커뮤니티 시설 예약 관리 시스템(구 FMCS 등)에 대한 외부 비인가 접근으로 인한 개인정보 유출 사실을 확인했다. 자이통합고객센터는 이같은 사실을 입주민들에게 문자 메시지로 안내했다.안내문에 따르면 GS건설은 28일 23시 29분경 비정상 접근 정황을 인지해 즉시 차단하고 로그를 정밀 분석했다. 그 결과 28일 22시 15분경 외부 비인가 접근이 발생한 사실을"
+        },
+        {
+          "title": "바이낸스 8조원 규모 가상자산 탈취 배후에 北 라자루스 지목",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146903",
+          "idxno": 146903,
+          "published_at": "10-30 17:34",
+          "category": null,
+          "snippet": "세계 최대 가상자산 거래소 바이낸스가 당한 약 63억달러(한화 약 8조4000억원) 규모 탈취 해킹 공격의 배후에 북한 해킹 조직이 있다는 분석이 나왔다. 30일(현지시간) 가상자산 전문매체 코인데스크는 다수의 블록체인 분석 업체를 인용, 북한 해킹 조직 라자루스가 불법 무기 프로그램 자금을 조달하기 위해 바이낸스를 해킹, 약 63억달러의 암호화폐 자산을 탈취했다고 보도했다. 블록체인 분석 회사 TRM은 라자루스 하위 조직 ‘트레이더트레이터스’(TraderTraitor)를 이번 바이낸스 해킹 배후로 지목하며, 이에 대해 높은 확신을"
+        },
+        {
+          "title": "한화시스템, 임직원 개인정보 유출 정황... “방산·금융은 무관”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146904",
+          "idxno": 146904,
+          "published_at": "10-30 18:26",
+          "category": null,
+          "snippet": "한화시스템 임직원들의 개인정보가 유출된 정황이 발견돼 조사가 이뤄지고 있다.30일 한화시스템에 따르면 일부 계열사의 외부 접속 계정을 통한 내부망 비인가 접근 정황이 확인돼 한국인터넷진흥원(KISA)과 개인정보보호위원회에 신고했다. 한화시스템 관계자는 “비인가 접근 확인 즉시 관련 인터넷프로토콜(IP)과 접속 경로를 차단하고 긴급 보안점검과 모니터링 강화 등 보안조치를 즉각 시행했다”며 “피해사실 확인 즉시 관계 법령에 따라 유관기관에 신고했으며, 현재 임직원 및 협력사 보호와 추가 피해 방지를 위해 필요한 보안조치를 지속 중”이라"
+        },
+        {
+          "title": "불법 해킹 포럼서 한국인 여권 150개 유포 정황... 민감정보 통째로 노출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146906",
+          "idxno": 146906,
+          "published_at": "10-30 18:47",
+          "category": null,
+          "snippet": "불법 해킹 포럼에서 한국인 여권 150개를 탈취했다는 주장이 나왔다. 30일 불법 해킹 포럼 ‘다크포럼스’(Darkforums)에서 활동하는 ‘알트자이언트’(ALTGIANT)라는 닉네임의 사용자가 23일 이 포럼 사이트에서 한국인 여권 150개를 공유한 정황이 포착됐다. 이 사용자는 한국인 여권을 통째로 찍은 사진 4장을 샘플로 게시하며, 게시글에 댓글을 다는 다른 사용자에게 추가로 다른 사진을 공유하겠다고 밝혔다. 업로드된 샘플 사진에는 실제 여권과 동일한 형태의 사진이 여권번호, 주민등록번호 등 민감정보가 그대로 노출돼 있었다."
+        },
+        {
+          "title": "340만명 사용 복지포인트 쇼핑몰 ‘현대이지웰’, 해킹으로 개인정보 유출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146907",
+          "idxno": 146907,
+          "published_at": "10-31 09:59",
+          "category": null,
+          "snippet": "복지포인트 쇼핑몰로 잘 알려진 현대이지웰이 해킹으로 회원정보가 유출됐다. 유출된 항목은 △이름 △생년월일 △성별 △휴대폰번호 △이메일 △주소 등이다.현대이지웰은 10월 29일 21시경 회원정보 조회 API에 외부의 비정상적인 접근이 발생했으며, 이를 인지한 즉시 공격 IP를 차단하고 해당 시스템에 대한 외부 접근을 전면 차단했다. 또한 금융감독원과 한국인터넷진흥원에 신고를 마쳤으며, 현재 관계기관과 긴밀한 공조를 통해 사고 경위와 유출 범위에 대한 조사를 이어가고 있다고 밝혔다.다만, 이번 사고로 인한 2차 피해나 정보의 악용 사례"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 네트워크 허용 도메인 밖이거나 DNS 해석 불가). 1회 시도 후 중단."
+      "status": "ok",
+      "items": [
+        {
+          "title": "Synology 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72254",
+          "nttId": 72254,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "Cisco 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72255",
+          "nttId": 72255,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "Linux 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72256",
+          "nttId": 72256,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "VMware 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72257",
+          "nttId": 72257,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "Oracle 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72258",
+          "nttId": 72258,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "Atlassian 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72259",
+          "nttId": 72259,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "Sophos 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72260",
+          "nttId": 72260,
+          "published_at": "2026-10-30",
+          "snippet": null
+        },
+        {
+          "title": "다우기술 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72261",
+          "nttId": 72261,
+          "published_at": "2026-10-30",
+          "snippet": null
+        }
+      ],
+      "error": null
     }
   }
 }
