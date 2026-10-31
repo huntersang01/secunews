@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-01",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "www.boannews.com WebFetch getaddrinfo ENOTFOUND: 클라우드 세션 네트워크 허용 도메인 밖 (egress 차단), 재시도 후에도 동일 — 2026-11-01 WebFetch 폴백 실패"
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "www.boho.or.kr WebFetch getaddrinfo ENOTFOUND: 클라우드 세션 네트워크 허용 도메인 밖 (egress 차단), 재시도 후에도 동일 — 2026-11-01 WebFetch 폴백 실패"
+    }
+  }
+}
