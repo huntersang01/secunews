@@ -2,14 +2,39 @@
   "run_date": "2026-11-01",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "www.boannews.com WebFetch getaddrinfo ENOTFOUND: 클라우드 세션 네트워크 허용 도메인 밖 (egress 차단), 재시도 후에도 동일 — 2026-11-01 WebFetch 폴백 실패"
+      "status": "ok",
+      "items": [
+        {
+          "title": "머니투데이, 9월 해킹으로 개인정보 1367건 유출 확인",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146908",
+          "idxno": 146908,
+          "published_at": "10-31 12:02",
+          "category": null,
+          "snippet": "머니투데이가 지난 9월 25일 발생한 해킹으로 1367건의 개인정보가 유출됐다고 공지했다.최초로 외부 불법 접근이 확인된 것은 지난 9월 25일 13시경이다. 당시 머니투데이는 외부로부터의 불법 접근 시도로 인해 개인정보 유출을 확인하고, 즉시 해당 접근 경로를 차단하는 한편, 한국인터넷진흥원에 개인정보 유출 사실을 신고했다.이후 10월 27일 후속 점검 과정에서 개인정보 1367건이 유출된 것이 확인됐다.유출된 개인정보는 ‘프리미엄 경제 칼럼 뉴스레터 데이터’의 △유저명 △전화번호 △이메일 △회사명 △사무실 전화번호 △직책과 ‘t"
+        },
+        {
+          "title": "美 FBI, ‘8.4조원’ 바이낸스 해킹 공식 수사 돌입... 트럼프 “北 소행 여부 주시 중”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146909",
+          "idxno": 146909,
+          "published_at": "10-31 16:30",
+          "category": null,
+          "snippet": "세계 최대 가상자산 거래소 바이낸스(Binance)에서 발생한 63억달러(한화 약 8조4000억원) 규모의 역대급 해킹 사건에 대해 미국 연방수사국(FBI)이 공식 수사에 돌입했다. 도널드 트럼프 미국 대통령 역시 사태를 예의주시하고 있다고 밝히면서, 이번 사건의 유력한 배후로 지목된 북한 해킹 조직에 대한 미국 정부 차원의 대대적인 압박과 후속 조치가 본격화될 전망이다.사상 최대 해킹에 미 수사당국 총출동... “자금 흐름 추적 중”30일(현지시간) 주요 외신에 따르면, 미국 FBI와 비밀경호국(USSS)은 바이낸스 해킹 사건의"
+        },
+        {
+          "title": "LGU+-교육부-티오리한국, AI·정보보호 영재교육원 교육과정 고도화 나선다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=146910",
+          "idxno": 146910,
+          "published_at": "11-01 10:06",
+          "category": null,
+          "snippet": "LG유플러스는 교육부와 사이버보안 전문기업 티오리한국과 함께 AI 시대 정보보안 전문가 육성에 나선다고 밝혔다. 최근 AI 발전과 전방위적 해킹 이슈로 사이버보안의 중요성이 커지면서, LG유플러스가 보유한 보안 전문성과 네트워크·AI 인프라를 활용해 미래 보안 인재의 실전 역량을 키우겠다는 의지다.지난 10월 31일, LG유플러스와 교육부, 티오리한국은 서울 강서구 LG사이언스파크에서 ‘AI·정보보호 영재교육원 운영 지원을 위한 업무협약’을 체결했다. 이번 협약식에는 홍관희 LG유플러스 정보보안센터장(CISO/CPO, 전무), 김도"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
+      "status": "ok",
       "items": [],
-      "error": "www.boho.or.kr WebFetch getaddrinfo ENOTFOUND: 클라우드 세션 네트워크 허용 도메인 밖 (egress 차단), 재시도 후에도 동일 — 2026-11-01 WebFetch 폴백 실패"
+      "error": null
     }
   }
 }
