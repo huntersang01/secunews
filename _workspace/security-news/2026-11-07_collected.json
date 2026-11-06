@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-07",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패(1회 재시도 후 동일): getaddrinfo ENOTFOUND www.boannews.com. 클라우드 세션의 허용 도메인에 없어 호스트가 resolve되지 않음. 세션 네트워크 설정에서 www.boannews.com 허용 필요."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패(1회 재시도 후 동일): getaddrinfo ENOTFOUND www.boho.or.kr. 클라우드 세션의 허용 도메인에 없어 호스트가 resolve되지 않음. 세션 네트워크 설정에서 www.boho.or.kr 허용 필요."
+    }
+  }
+}
