@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-08",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "getaddrinfo ENOTFOUND www.boannews.com (세션 네트워크 허용 도메인 밖이거나 DNS 해석 실패). WebFetch 재시도 없이 실패 처리."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "getaddrinfo ENOTFOUND www.boho.or.kr (세션 네트워크 허용 도메인 밖이거나 DNS 해석 실패). WebFetch 재시도 없이 실패 처리."
+    }
+  }
+}
