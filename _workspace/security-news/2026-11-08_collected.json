@@ -2,14 +2,46 @@
   "run_date": "2026-11-08",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "getaddrinfo ENOTFOUND www.boannews.com (세션 네트워크 허용 도메인 밖이거나 DNS 해석 실패). WebFetch 재시도 없이 실패 처리."
+      "status": "ok",
+      "items": [
+        {
+          "title": "한국융합보안학회, 2026 추계학술대회 성료... 22개 기관 논문 75편 발표",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147085",
+          "idxno": 147085,
+          "published_at": "11-07 13:55",
+          "category": null,
+          "snippet": "한국융합보안학회(회장 이동휘)는 6일 성신여자대학교에서 ‘2026 한국융합보안학회 추계학술대회 및 워크숍’을 개최했다고 밝혔다.이번 학술대회에는 22개 기관에서 총 75편의 논문이 제출돼, 융합보안·AI보안·개인정보보안 등 분야별 10개 구두발표 세션과 2개 포스터발표 세션에서 발표됐다.특별 세션에서는 김석주 한국트렌드마이크로 이사와 이상국 안랩 전무가 각각 ‘에이전틱 AI가 가져올 새로운 위협’, ‘AI 시대 보안 동향 및 제언’을 주제로 발표했다. 개회식에서는 이동휘 회장의 개회사와 이원호 성신여자대학교 부총장, 김현준 한국사회"
+        },
+        {
+          "title": "잇단 가상자산 거래소 해킹... 금감원, 가상자산사업자 CISO 소집한다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147086",
+          "idxno": 147086,
+          "published_at": "11-08 09:50",
+          "category": null,
+          "snippet": "금융당국과 국내 가상자산 기업 정보보호최고책임자(CISO)가 한자리에 모여 가상자산 분야 보안 대책을 논의한다.8일 관련 업계에 따르면, 금융감독원은 19일 가상자산업권 해킹 사고 관련 대응 회의를 연다. 최근 국내외 가상자산 거래소를 겨냥한 해킹 사고가 잇따름에 따라 대응 방안을 공동 논의하기 위해서다. 거래소와 커스터디(수탁) 기업 등 국내 모든 가상자산사업자 CISO가 참석 대상이다. 각사 보안 관리 운영 실태를 점검하고 해킹 예방 및 대응 방안 등을 논의할 것으로 알려졌다.앞서 금융위원회도 5일 가상자산사업자를 포함한 전 금"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
-      "items": [],
-      "error": "getaddrinfo ENOTFOUND www.boho.or.kr (세션 네트워크 허용 도메인 밖이거나 DNS 해석 실패). WebFetch 재시도 없이 실패 처리."
+      "status": "ok",
+      "items": [
+        {
+          "title": "OpenSSH 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72288",
+          "nttId": 72288,
+          "published_at": "2026-11-07",
+          "snippet": null
+        },
+        {
+          "title": "인피니트헬스케어 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72289",
+          "nttId": 72289,
+          "published_at": "2026-11-07",
+          "snippet": null
+        }
+      ],
+      "error": null
     }
   }
 }
