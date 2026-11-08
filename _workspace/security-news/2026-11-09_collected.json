@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-09",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boannews.com (DNS 해석 실패). 클라우드 세션의 허용 도메인 목록 밖이거나 호스트 접근이 차단된 것으로 보임. 재시도 생략 (동일 원인의 영구 실패로 판단, 사용자가 허용 설정 후 재실행 필요)."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boho.or.kr (DNS 해석 실패). 클라우드 세션의 허용 도메인 목록 밖이거나 호스트 접근이 차단된 것으로 보임. 재시도 생략 (동일 원인의 영구 실패로 판단, 사용자가 허용 설정 후 재실행 필요)."
+    }
+  }
+}
