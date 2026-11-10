@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-11",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 네트워크 허용 목록 밖으로 판단됨). GitHub Actions 사전수집 파일(2026-11-11_collected.json)도 실행 전 상태라 없었음."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 네트워크 허용 목록 밖으로 판단됨). GitHub Actions 사전수집 파일(2026-11-11_collected.json)도 실행 전 상태라 없었음."
+    }
+  }
+}
