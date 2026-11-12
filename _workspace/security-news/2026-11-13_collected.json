@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-13",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 egress 차단, DNS 해석 실패). 1회 시도 후 중단."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 egress 차단, DNS 해석 실패). 1회 시도 후 중단."
+    }
+  }
+}
