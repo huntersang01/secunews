@@ -2,14 +2,203 @@
   "run_date": "2026-11-18",
   "sources": {
     "boannews": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션의 허용 네트워크 도메인 밖이라 DNS 해석 불가). 재시도 미실시: 도메인 허용 전까지 재시도 무의미."
+      "status": "ok",
+      "items": [
+        {
+          "title": "[자바 취약점 비상] PHP 이어 ‘자바’(Java)도 뚫렸다... 대기업·공공기관 핵심 서버 ‘보안 경보’",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147325",
+          "idxno": 147325,
+          "published_at": "11-18 07:05",
+          "category": null,
+          "snippet": "대부분 IT 시스템에 널리 쓰이는 프로그래밍 언어 자바(Java)에서 치명적 보안 취약점이 발견됐다. 이 취약점을 악용하면 공격자는 로그인 등 인증 절차를 거치지 않아도 원격으로 시스템 내부에서 악성코드를 실행할 수 있다. 위험도 역시 최고 수준으로 분류됐다. 패치 공개 즉시 조치에 들어가야 한다. 17일 보안 업계에 따르면, 자바에서 메모리 손상 취약점이 발견됐다. 이 취약점을 악용하면 자바 애플리케이션에서 인증 이전에 원격 코드 실행(RCE)이 가능한 것으로 알려졌다. 보안업계 안팎에서는 이 취약점을 ‘자바4셸’(Java4She"
+        },
+        {
+          "title": "28개 대학 연쇄해킹 충격... 아르텍스 활용해 ‘rERP’ 집중 타격했다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147326",
+          "idxno": 147326,
+          "published_at": "11-17 16:24",
+          "category": null,
+          "snippet": "국내 28개 대학을 동시에 해킹했다고 주장하는 공격자가 등장한 가운데, 공격 과정에서 아르텍스(ARTEX)를 사용했을 가능성이 포착됐다. 대학 공통 연구행정통합시스템 ‘rERP’를 집중 타격한 것으로 분석됐다. rERP는 다수 대학이 사용하는 산학협력단 표준 연구행정 시스템이다. 공격자 입장에선 여러 대학의 산학협력 연구 정보들을 동시다발적으로 탈취할 수 있는 효율적 공급망이란 얘기다. 17일 보안 업계에 따르면 최근 ‘KimJEN’이라는 활동명의 공격자가 한국 대학들 데이터를 탈취했다고 주장하며 31개의 압축 파일(ac.kr.zi"
+        },
+        {
+          "title": "[배종찬의 보안 빅데이터] 통신차단까지 무력화된 수능 AI 부정행위 우려",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147327",
+          "idxno": 147327,
+          "published_at": "11-17 18:10",
+          "category": null,
+          "snippet": "어느덧 아침저녁으로 ‘쌀쌀한 날씨’가 이어지는 가운데, 1년 동안 구슬땀을 흘려온 수험생들의 결실을 맺는 대학수학능력시험이 코앞으로 다가왔다.최근 빅데이터 분석 매체인 썸트렌드(SomeTrend)의 2026년 11월 12~15일 빅데이터 분석 결과에 따르면, 세무사 등 주요 국가 자격시험에서 AI 안경, 초소형 단추 카메라, 좁쌀 이어폰 등을 동원한 지능형 ‘부정행위’가 수면 위로 드러나면서 사회적 ‘우려’가 최고조에 달하고 있다.이는 더 이상 단순한 일탈을 넘어 우리 사회의 신뢰 시스템을 뒤흔드는 ‘문제 크다’와 ‘위험 있다’는"
+        },
+        {
+          "title": "[신간] 현직 기술사 3인이 쓴 2027 정보보안기사 비법서... 수제비 필기 기본서 제2판 출간",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147328",
+          "idxno": 147328,
+          "published_at": "11-17 16:32",
+          "category": null,
+          "snippet": "2027년 변경된 출제기준을 반영한 ‘2027 수제비 정보보안기사 필기 기본서 [제2판]’가 20일 출간된다.수험서 전문 브랜드 수제비 출판사가는 기존 수험서의 기출 복원 중심 구성에서 나아가 2027년 개편되는 한국방송통신전파진흥원(KCA)의 출제 기준에 맞춰 목차와 이론 체계를 전면 재구성했다. 이번 제2판 집필에는 수제비 시리즈 대표 저자인 윤영빈 기술사와 문광석 기술사, 김영호 기술사 등 보안 정책 수립과 ‘국가직무능력표준’(NCS) 모듈 개발 경험을 보유한 현직 기술사 3인이 참여했다.개정판은 총 2권(989쪽) 분량으로"
+        },
+        {
+          "title": "메타엠 해킹에 ‘메가커피’ 고객 정보도 털려... 휴대전화번호 30건 유출",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147329",
+          "idxno": 147329,
+          "published_at": "11-17 15:12",
+          "category": null,
+          "snippet": "협력사 해킹으로 메가MGC커피(메가커피)에서 고객 30명의 개인정보가 유출되는 사고가 발생했다. 메가커피는 17일 공지사항에서 “회사의 고객센터 시스템을 운영하는 위탁업체 메타엠이 외부 해킹 공격을 받아 고객센터와 통화한 고객 일부의 휴대전화번호 30건이 유출된 것으로 확인됐다”며 “고객센터에 접수를 남긴 고객 정보도 유출됐을 가능성이 있다”고 밝혔다. 메타엠은 12일 외부 공격으로 서버가 해킹 공격을 당했다. 이후 메가커피에 개인정보 유출 사실을 통보했다. 다만 성명, 상담 내용, 녹취 기록, 결제정보, 주민등록번호 등 정보는 유"
+        },
+        {
+          "title": "파수 AI, ‘FDI 서밋 2026-하반기’서 AI 에이전트 구축·통제 해법 공개",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147330",
+          "idxno": 147330,
+          "published_at": "11-17 15:44",
+          "category": null,
+          "snippet": "파수 AI가 17일 ‘FDI 서밋 2026-하반기’를 열고 안전한 AI 가치 극대화 전략을 제시했다.FDI 서밋 2026(Fasoo Digital Intelligence Summit 202)은 기업과 기관의 CIO·CISO·CAIO를 대상으로 최신 트렌드와 보안 대응 전략을 공유하는 세미나다. ‘안전한 AI 가치 극대화 전략’(Maximizing Value from AI Securely)을 주제로 진행된 이날 행사는 금융·유통·제조·법률 등 다양한 산업의 보안 및 AX 리더 50여명이 참석했다.조규곤 파수 AI 대표는 기업의 AI"
+        },
+        {
+          "title": "한국정보처리학회 ESG 연구회, ‘AI 시대, ESG가 가야 할 길’ 창립 기념 세미나 개최",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147331",
+          "idxno": 147331,
+          "published_at": "11-17 15:52",
+          "category": null,
+          "snippet": "한국정보처리학회 ESG 연구회는 17일 국회 의원회관 제2세미나실에서 창립 기념 세미나 ‘AI 시대, ESG가 가야 할 길’을 개최했다.더불어민주당 이재강 국회의원, 한국정보처리학회, ESG 연구회가 공동으로 주최 및 주관했다. 기업의 ESG 대응 과정에서 정보기술의 활용 가능성을 살펴보고, 전문가 발제와 공공기관 사례를 바탕으로 실무 과제와 협력 방향을 논의했다.행사 사회는 배정현 한국공공ESG연구원 원장이 맡았다. 이재강 의원 축사에 이어 박능수 한국정보처리학회 학회장, 최정식 보안뉴스·인더스트리뉴스 회장(한국정보처리학회 수석부"
+        },
+        {
+          "title": "레고랜드·씨라이프 부산 개인정보 유출 가능성... 입장객 예약 시스템 ‘액세소’ 해킹",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147332",
+          "idxno": 147332,
+          "published_at": "11-17 15:55",
+          "category": null,
+          "snippet": "입장객 예약 시스템 운영사 ‘액세소’(Accesso)의 티켓팅 시스템에서 보안 침해사고가 발생해 레고랜드와 씨라이프 부산 아쿠아리움에서 고객 개인정보가 유출됐을 가능성이 제기됐다. 레고랜드코리아는 16일 공지사항을 통해 “입장객 예약 시스템 운영사 액세소의 티켓팅 시스템에서 보안 침해사고가 발생해 일부 고객의 개인정보가 외부로 유출된 사실을 통보받았다”며 “이에 따라 고객 개인정보가 유출됐을 가능성이 있다”고 밝혔다. 정확한 유출 규모 및 피해 범위는 아직 조사 중이다. 현재 액세소 티켓팅 시스템에 접근한 해커는 일부 연간이용권(시"
+        },
+        {
+          "title": "KISIA, 인도네시아 대학생 정보보호 교육... 글로벌 인재풀 구축",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147333",
+          "idxno": 147333,
+          "published_at": "11-17 15:59",
+          "category": null,
+          "snippet": "한국정보보호산업협회(KISIA, 회장 김진수)와 과학기술정보통신부(부총리 겸 장관 배경훈)는 글로벌 인재풀 구축을 목적으로 인도네시가 대학생을 초청해 정보보호 교육을 제공했다. KISIA는 온라인 교육 우수 수료생 10명을 국내로 초청해 일주일간 오프라인 교육 프로그램을 운영했다고 17일 밝혔다.이 교육 프로그램은 국내 정보보호 기업의 글로벌 사업 경쟁력 강화와 해외 현지 인력 활용 기반 마련이 목적이다. KISIA는 2023년부터 현지 전문 인력을 다양한 형태로 활용할 수 있도록 인도네시아 정보보호 인재 발굴 및 인력풀(DB) 구"
+        },
+        {
+          "title": "모니터랩, ‘FISCON 2026’서 제로트러스트·AI 보안 전략 제시",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147334",
+          "idxno": 147334,
+          "published_at": "11-17 16:25",
+          "category": null,
+          "snippet": "모니터랩이 최근 서울 여의도 콘래드 서울에서 열린 금융정보보호 컨퍼런스 ‘FISCON 2026’에 참가해 제로트러스트·AI 보안 전략을 선보였다고 17일 밝혔다.올해 FISCON 2026은 ‘Now for Next Finance’를 주제로 AI 기반 사이버 위협 고도화에 따른 금융권 보안 대응 전략과 AI 보안체계 전환 방향을 모색하기 위해 마련됐다. 모니터랩은 SWG·CASB·GenAI Security·RBI·ZTNA 등 제로트러스트 기반 솔루션에 웹 애플리케이션 보안 솔루션 WAAP과 파일 무해화 솔루션 CDR을 결합한 통합 포"
+        },
+        {
+          "title": "[자바 취약점 비상] 오라클, ‘자바4셸’ 등 RCE 취약점 11건 긴급 패치... “즉시 업데이트 필수”",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147336",
+          "idxno": 147336,
+          "published_at": "11-18 08:08",
+          "category": null,
+          "snippet": "국내는 물론 전 세계적으로 인프라 전반에서 광범위하게 사용되는 자바(Java) 생태계에 또다시 대형 보안 경고등이 켜졌다. ‘자바4셸’(Java4Shell, CVE-2026-114938)에 대한 오라클의 공식 보안 업데이트가 마침내 배포됐다. 오라클을 비롯한 한국인터넷진흥원(KISA) 등 관계기관에서는 17.0.21.1, 21.0.13.1과 같은 최신 패치 빌드로 즉시 전환할 것을 권고했다. 오라클(Oracle)은 17일(현지시간) ‘2026년 11월 긴급 보안 패치 업데이트’(CSPU)를 발표했다. 이번 긴급 패치에는 자바4셸 관"
+        },
+        {
+          "title": "AI 에이전트 통제부터 LLM 버그헌팅까지... ‘OWASP Korea Day 2026’ 28일 열려",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147338",
+          "idxno": 147338,
+          "published_at": "11-18 11:10",
+          "category": null,
+          "snippet": "OWASP 서울 챕터가 오는 28일 보안 퍼런스 ‘OWASP Korea Day 2026’을 개최한다.국제 웹 보안 비영리 재단 OWASP의 서울 지부인 OWASP 서울 챕터는 11월 28일 오전 10시부터 오후 6시까지 서울 강남구 스페이스쉐어 삼성역센터에서 ‘OWASP Korea Day 2026’을 진행한다고 18일 밝혔다.올해 행사는 “지식은 기계가 학습할 수 있지만, 경험은 나눌 때 가치가 생긴다”라는 슬로건과 함께 AI 기술이 사이버 공격의 속도와 규모를 바꾸는 환경에서 현업 실무자와 연구자, 대학 동아리, 버그바운티 팀이"
+        },
+        {
+          "title": "윈도우 11의 AI 코딩 도구 추적 기능 발견... 사생활 보호하려면 &apos;진단 데이터&apos; 꺼야",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147340",
+          "idxno": 147340,
+          "published_at": "11-18 10:20",
+          "category": null,
+          "snippet": "윈도우 11에 사용자가 쓰는 AI 코딩 에이전트를 가려내 진단 데이터 보고서에 담는 기능이 들어 있다는 분석이 나왔다. 개발자 PC에서 클로드나 코덱스, 커서 같은 도구가 돌아가는지가 마이크로소프트에 전송될 수 있다는 얘기다.보안 연구원 쉬성 리(Xusheng Li)는 이 내용을 개인 블로그에 공개했다. 처음 단서를 찾은 뒤 X에 알렸고, 이후 프로그램 분석 도구 바이너리닌자(Binary Ninja)로 파일을 뜯어본 기술 분석 전문을 올렸다.쉬성 리가 분석한 파일은 MissionControlAggregator.dll이다. 윈도우 원"
+        },
+        {
+          "title": "버려진 도메인 하나로...월 1300만 다운로드 음성 AI ‘코코로’ 게시자 계정 장악",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147341",
+          "idxno": 147341,
+          "published_at": "11-18 12:00",
+          "category": null,
+          "snippet": "AI 모델 공유 플랫폼 허깅페이스에서 한 달에 1300만 번 가까이 다운로드되는 음성 합성 모델 코코로(Kokoro)의 게시자 계정이 보안 연구원 손에 넘어갔다.블리핑컴퓨터에 따르면 보안 연구원 알론 헤르츠(Alon Hertz)와 그의 팀은 허깅페이스가 게시자 소유권을 따로 확인하지 않는 점을 파고들었다. 코코로는 글을 음성으로 읽어 주는 공개 모델로, 기본 제공 목소리가 50개 넘는다. 구글과 엔비디아, 인텔의 개발 도구에 쓰이고 AMD와 아마존웹서비스(AWS) 안내서에도 등장한다.코코로를 만든 개발자 헥스그래드(Hexgrad)는"
+        },
+        {
+          "title": "[자바 취약점 비상] “인터넷 공개 서비스부터!”... 과기정통부, 자바 취약점 긴급점검 권고",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147343",
+          "idxno": 147343,
+          "published_at": "11-18 09:59",
+          "category": null,
+          "snippet": "자바(JAVA) 보안 취약점이 발견됨에 따라 버전과 실행환경을 긴급히 점검하고, 인터넷에 공개된 서비스부터 우선 조치하라는 정부 권고가 내려왔다.과학기술정보통신부(부총리 겸 장관 배경훈)와 한국인터넷진흥원(KISA)는 자바 실행환경인 오픈제이디케이(OpenJDK)에서 보안 취약점이 발견됨에 따라, 긴급 점검과 보안 업데이트를 권고했다.공격자가 악용할 경우 악성코드 실행 등의 피해가 발생할 수 있다. 이에 과기정통부는 보호나라 보안공지에 따라 신속하게 보안조치를 해줄 것을 당부했다.자바란 웹서비스, 그룹웨어, ERP 등 다양한 프로그"
+        },
+        {
+          "title": "“AI로 보안 운영 자동화”... AI스페라, 위협 노출 관리 플랫폼 ‘AITEM’ 출시",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147345",
+          "idxno": 147345,
+          "published_at": "11-18 10:20",
+          "category": null,
+          "snippet": "‘크리미널 IP’에 공격표면관리(ASM) 뿐 아니라 지속적 위협 노출 관리(CTEM)와 모의해킹까지 더해져 AI를 기반으로 모의해킹부터 위협 분석까지 자동화할 수 있게 됐다.사이버 위협 인텔리전스 전문기업 AI스페라(대표 강병탁)는 AI 기반 위협 노출 관리 플랫폼 ‘크리미널 IP 에이아이템’(Criminal IP AITEM)을 19일 정식 출시한다고 18일 밝혔다.AITEM은 기업의 서버와 웹사이트 등에 노출된 보안 위험을 탐지하고, AI 에이전트로 위협 분석과 반복적인 보안 업무를 자동화하는 플랫폼이다. ‘크리미널 IP ASM’"
+        },
+        {
+          "title": "[카드뉴스] 시험장 뚫은 초소형 카메라 &apos;AI 커닝&apos; 실태....청와대·민관군 &apos;AI 위협&apos; 총력전",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147346",
+          "idxno": 147346,
+          "published_at": "11-18 10:32",
+          "category": null,
+          "snippet": "세무사 시험 수석 합격자가 감독관 앞에서 초소형 카메라와 AI를 이용해 160문항 중 159개를 맞힌 첨단 부정행위 사실이 적발되었다. 이에 청와대와 민·관·군은 수능 시험장 열화상 카메라 투입, 국가자격시험 전수조사, IT 자산 전수조사 및 SBOM 조기 도입 등 총력 대응에 나섰다. 보이지 않는 AI 악용과 첨단 침투를 차단하기 위해 열화상 탐지·전파 격리와 상시적인 공급망 전수 검증 체계 구축이 요구된다."
+        },
+        {
+          "title": "[자바 취약점 비상] 중앙부처 시스템 89%가 쓰는데… ‘자바’ 긴급 보안 패치 배포에 공공·민간 점검 비상",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147347",
+          "idxno": 147347,
+          "published_at": "11-18 11:08",
+          "category": null,
+          "snippet": "전 세계 웹사이트와 기업·기관 업무 시스템의 핵심 기반인 프로그래밍 언어 ‘자바’(Java)에서 보안 취약점이 확인돼 오라클과 오픈소스 자바 진영이 18일 긴급 보안 패치를 배포했다. 국제 취약점 식별 번호 ‘CVE-2026-114938’로 등록된 이번 결함은 공격자가 별도 로그인 절차 없이 외부에서 서버를 제어할 수 있는 ‘원격 코드 실행’(RCE) 위험이 있어 관계 당국이 긴급 점검에 나섰다.오라클의 보안 권고문에 따르면 이번 취약점은 자바를 구동하는 기본 엔진인 ‘자바 가상머신’(JVM)이 인터넷 데이터를 텍스트 문자로 변환·"
+        },
+        {
+          "title": "[자바 취약점 비상] 이번에도 AI가 찾았다... 사람+AI ‘켄타우로스 해커’ 시대 왔다",
+          "url": "https://www.boannews.com/news/articleView.html?idxno=147349",
+          "idxno": 147349,
+          "published_at": "11-18 12:30",
+          "category": null,
+          "snippet": "대부분 기업 및 기관 IT 시스템에 쓰이는 자바 프로그래밍 언어에 원격코드실행(RCE)을 가능하게 하는 치명적 취약점이 발견돼 18일 아침 수청 패치가 배포됐다. 최근 발견된 다른 주요 취약점과 마찬가지로 이 결함 역시 인공지능(AI)의 도움을 받아 발견됐다. 이 취약점 ‘자바4셸’(Java4Shell)은 미국 보안 스타트업 칼리프(Calif)가 오픈AI ‘챗GPT-6 사이버’ 모델을 활용해 찾았다. 자바 실행 환경 ‘오픈JDK’에서 메모리의 데이터 처리에 손상을 일으켜 정보 유출이나 RCE 실행으로 이어질 수 있게 한다. 칼리프는"
+        }
+      ],
+      "error": null
     },
     "kisa_boho": {
-      "status": "failed",
-      "items": [],
-      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션의 허용 네트워크 도메인 밖이라 DNS 해석 불가). 재시도 미실시: 도메인 허용 전까지 재시도 무의미."
+      "status": "ok",
+      "items": [
+        {
+          "title": "MongoDB 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72309",
+          "nttId": 72309,
+          "published_at": "2026-11-17",
+          "snippet": null
+        },
+        {
+          "title": "PostgreSQL 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72310",
+          "nttId": 72310,
+          "published_at": "2026-11-17",
+          "snippet": null
+        },
+        {
+          "title": "Check Point 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72311",
+          "nttId": 72311,
+          "published_at": "2026-11-17",
+          "snippet": null
+        },
+        {
+          "title": "Citrix 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72312",
+          "nttId": 72312,
+          "published_at": "2026-11-17",
+          "snippet": null
+        },
+        {
+          "title": "Oracle 제품 보안 업데이트 권고",
+          "url": "https://www.boho.or.kr/kr/bbs/view.do?menuNo=205020&bbsId=B0000133&nttId=72313",
+          "nttId": 72313,
+          "published_at": "2026-11-18",
+          "snippet": null
+        }
+      ],
+      "error": null
     }
   }
 }
