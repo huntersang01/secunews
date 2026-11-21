@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-22",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 네트워크 허용 목록 밖으로 판단됨). 재시도 생략."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 네트워크 허용 목록 밖으로 판단됨). 재시도 생략."
+    }
+  }
+}
