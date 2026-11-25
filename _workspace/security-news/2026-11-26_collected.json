@@ -1,0 +1,15 @@
+{
+  "run_date": "2026-11-26",
+  "sources": {
+    "boannews": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boannews.com (클라우드 세션 네트워크 허용 도메인 밖이라 DNS 조회 실패로 추정). 재시도 1회 생략 — 동일 오류가 세션 정책 문제임을 시사하므로 재시도해도 같은 결과로 판단."
+    },
+    "kisa_boho": {
+      "status": "failed",
+      "items": [],
+      "error": "WebFetch 실패: getaddrinfo ENOTFOUND www.boho.or.kr (클라우드 세션 네트워크 허용 도메인 밖이라 DNS 조회 실패로 추정). 재시도 1회 생략 — 동일 사유."
+    }
+  }
+}
